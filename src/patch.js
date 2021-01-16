@@ -31,8 +31,8 @@ function doPatch (node, patches) {
   patches.forEach(patch => {
     switch (patch.type) {
       case ATTRS:
-        for (let key in patch.props) {
-          const value = patch.props[key]
+        for (let key in patch.attrs) {
+          const value = patch.attrs[key]
           if (value) {
             setAttr(node, key, value)
           } else {
